@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<title>P.F:{{content['name'].upper()}}</title>
+</head>
+<header style="text-align:center;">
+	<img width="300" height="100" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png">
+</header>
+<body>
+	<form class="container" action="#" method="POST">
+		<div>
+			<div style="margin-top:10px">
+				<label style="font-size:22px;margin-top: 15px;margin-bottom: ;border: 2px solid black;background-color: black;color:white;border-radius:4px">{{content['name'].upper()}}  #{{content['id']}}</label><br>
+			</div>
+			<div style="margin-top: 10px;">
+			{% for i in content['types']%}
+				<input type="button" style="font-size: 20px;border-radius: 4px" class="{{i['type']['name']}}" value="{{i['type']['name'].upper()}}"></input>
+			{% endfor %}
+			</div>
+			{%if content['name'] in ['golbat','charizard','moltres','articuno','zapdos','ho-oh','lugia','rayquaza']%}
+			<div class="view">
+				<img id="gif" style="height: 80%;" src="https://projectpokemon.org/images/normal-sprite/{{content['name']}}.gif">
+			</div>
+			{% elif content['name'] in ['kyogre']%}
+			<div class="view">
+				<img style="height: 30%;width: 100%;margin-top: 30px;" src="https://projectpokemon.org/images/normal-sprite/{{content['name']}}.gif">
+			</div>
+			{% elif content['name'] in ['metagross']%}
+			<div class="view" style="width: 150px;margin-left: 30%;">
+				<img style="margin-top: 30px;" src="https://projectpokemon.org/images/normal-sprite/{{content['name']}}.gif">
+			</div>
+			{%else%}
+			<div class="view">
+				<img id="gif" src="https://projectpokemon.org/images/normal-sprite/{{content.name}}.gif">
+			</div>
+			{%endif%}
+			<table id="tabela" style="border:1px solid black;border-radius: 4px;">
+				<thead>
+					<tr>
+						<th>Altura</th>
+						<th>Peso</th>
+					</tr>
+				</thead>
+				<tbody>
+					<td>
+						{{content['height'] / 10}}m	
+					</td>
+					<td>
+						{{content['weight'] / 10.0}}Kgs
+					</td>
+				</tbody>
+			</table>
+			<section style="border: 2px solid orange; margin-top: 10px;font-size: 14px;font-family: Arial; text-align: center;width: 60%;padding: 10px 10px;background-color: black;margin-left: 16%; margin-bottom: 12px;color: white;border-radius: 4px;">
+				<p>{{description}}</p>
+			</section>
+		</div>
+		<input type="submit" name="back" value="Voltar">
+	</form>
+</body>
+<footer>
+	<p>Desenvolvido por Gabriel Sena, 2022</p>
+</footer>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<title>PokéFinder</title>
+</head>
+<header style="text-align: center; background-color: white;">
+</header>
+<body style="text-align: center;background-color: blue;" class="containerHome">
+	<div style="margin-top: 120px;">
+		<img width="300" height="100" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png">
+		<form action=# method="post" style="margin-top:10px">
+			<input id=busca type="text" name="pokemon" placeholder="Insira o nome de um pokemon ou seu id correspondente" autofocus="true"><br>
+			<input style="background-color: #4CAF50;" type="submit" name="search" value="Buscar">
+		</form>
+	</div>
+</body>
+<footer style="position: fixed;">
+	<p>Desenvolvido por Gabriel Sena, 2022</p>
+</footer>
+</html>
