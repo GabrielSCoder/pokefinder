@@ -13,7 +13,7 @@
 	<form class="container" action="#" method="POST">
 		<div>
 			<div style="margin-top:10px">
-				<label style="font-size:22px;margin-top: 15px;margin-bottom: ;border: 2px solid black;background-color: black;color:white;border-radius:4px">{{content['name'].upper()}}  #{{content['id']}}</label><br>
+				<label style="font-size:22px;margin-top: 15px;margin-bottom: ;border: 2px solid orange;background-color: black;color:white;border-radius:4px">{{content['name'].upper()}}  #{{content['id']}}</label><br>
 			</div>
 			<div style="margin-top: 10px;">
 			{% for i in content['types']%}
@@ -37,7 +37,7 @@
 				<img id="gif" src="https://projectpokemon.org/images/normal-sprite/{{content.name}}.gif">
 			</div>
 			{%endif%}
-			<table id="tabela" style="border:1px solid black;border-radius: 4px;">
+			<table id="tabela" style="border:1px solid orange;border-radius: 4px;">
 				<thead>
 					<tr>
 						<th>Altura</th>
@@ -57,7 +57,7 @@
 				<p>{{description}}</p>
 			</section>
 		</div>
-		<input type="submit" name="back" value="Voltar">
+		<input type="submit" name="back" style="border: 1px solid orange;"value="Voltar">
 	</form>
 </body>
 <footer>
