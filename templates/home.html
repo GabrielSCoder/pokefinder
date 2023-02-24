@@ -3,21 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
 	<title>PokéFinder</title>
 </head>
-<header style="text-align: center; background-color: white;">
-</header>
-<body style="text-align: center;background-color: blue;" class="containerHome">
-	<div style="margin-top: 120px;">
+<body class="containerHome">
+	<div style="margin-top: 110px;">
 		<img width="300" height="100" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png">
-		<form action=# method="post" style="margin-top:10px">
-			<input id=busca type="text" name="pokemon" placeholder="Insira o nome de um pokemon ou seu id correspondente" autofocus="true"><br>
-			<input style="background-color: #4CAF50;" type="submit" name="search" value="Buscar">
+		<form id="sub" action=# method="post">
+			<input id=busca type="text" name="pokemon" placeholder="Type the number or the id of a pokemon" autofocus="true"><br>
+			<input id="search" class="menubtn" type="submit" name="search" value="SEARCH">
+			<input id="rand" class="menubtn" type="button" value="RANDOM" onclick="randNumber();"><br>
+			<input type="hidden" name="dark" value="DARK" onclick="darker();">
+			<input id="rnd" type="hidden" name="randomPkm" value="0">
 		</form>
 	</div>
 </body>
 <footer style="position: fixed;">
 	<p>Desenvolvido por Gabriel Sena, 2022</p>
 </footer>
+<script src="static/js/script.js"></script>
 </html>

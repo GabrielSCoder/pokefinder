@@ -6,18 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 	<title>P.F:{{content['name'].upper()}}</title>
 </head>
-<header style="text-align:center;">
-	<img width="300" height="100" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png">
-</header>
 <body>
+	<header style="text-align:center;">
+		<img width="300" height="100" src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png">
+	</header>
 	<form class="container" action="#" method="POST">
 		<div>
 			<div style="margin-top:10px">
-				<label style="font-size:22px;margin-top: 15px;margin-bottom: ;border: 2px solid orange;background-color: black;color:white;border-radius:4px">{{content['name'].upper()}}  #{{content['id']}}</label><br>
+				<label id="pkname">{{content['name'].upper()}}  #{{content['id']}}</label><br>
 			</div>
 			<div style="margin-top: 10px;">
 			{% for i in content['types']%}
-				<input type="button" style="font-size: 20px;border-radius: 4px" class="{{i['type']['name']}}" value="{{i['type']['name'].upper()}}"></input>
+				<input type="button" style="font-size: 20px;border-radius: 4px;cursor: default;" class="{{i['type']['name']}}" value="{{i['type']['name'].upper()}}" disabled></input>
 			{% endfor %}
 			</div>
 			{%if content['name'] in ['golbat','charizard','moltres','articuno','zapdos','ho-oh','lugia','rayquaza']%}
@@ -28,20 +28,23 @@
 			<div class="view">
 				<img style="height: 30%;width: 100%;margin-top: 30px;" src="https://projectpokemon.org/images/normal-sprite/{{content['name']}}.gif">
 			</div>
-			{% elif content['name'] in ['metagross']%}
+			{% elif content['name'] in ['metagros']%}
 			<div class="view" style="width: 150px;margin-left: 30%;">
 				<img style="margin-top: 30px;" src="https://projectpokemon.org/images/normal-sprite/{{content['name']}}.gif">
 			</div>
+			{% elif content['id'] > 890%}
+			<div class="view">
+			</div>
 			{%else%}
 			<div class="view">
-				<img id="gif" src="https://projectpokemon.org/images/normal-sprite/{{content.name}}.gif">
+				<img class="pokegif" src="https://projectpokemon.org/images/normal-sprite/{{content.name}}.gif">
 			</div>
 			{%endif%}
 			<table id="tabela" style="border:1px solid orange;border-radius: 4px;">
 				<thead>
 					<tr>
-						<th>Altura</th>
-						<th>Peso</th>
+						<th>Height</th>
+						<th>Weight</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -53,14 +56,11 @@
 					</td>
 				</tbody>
 			</table>
-			<section style="border: 2px solid orange; margin-top: 10px;font-size: 14px;font-family: Arial; text-align: center;width: 60%;padding: 10px 10px;background-color: black;margin-left: 16%; margin-bottom: 12px;color: white;border-radius: 4px;">
+			<section class="sec">
 				<p>{{description}}</p>
 			</section>
 		</div>
-		<input type="submit" name="back" style="border: 1px solid orange;"value="Voltar">
+		<input type="submit" class="menubtn menuback" name="back" style="border: 1px solid orange;background-color: black;"value="BACK">
 	</form>
 </body>
-<footer>
-	<p>Desenvolvido por Gabriel Sena, 2022</p>
-</footer>
 </html>

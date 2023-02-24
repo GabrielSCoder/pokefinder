@@ -1,8 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-/*{margin: 0;padding: 0};*/
 
-
-body{ height: 500px; font-family: cursive; font-size: 20px;background-color: blue;}
+body {
+	height: 500px;
+	font-family: cursive;
+	font-size: 20px;
+	background-color: blue;
+	text-align: center;
+}
 
 footer {
 	height: 50px;
@@ -24,12 +33,20 @@ footer {
 	border-radius: 4px;
 }
 
+
 .containerHome {
 	margin: 20px auto;
 	width: 400px;
-	background-color:white;
 	text-align: center;
+}
 
+.pokegif {
+	  position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .view {
@@ -40,13 +57,20 @@ footer {
 	border-radius: 4px; 
 	margin-top: 10px;
 	margin-left: 33%;
-	
+	position: relative;
 }
 
 #gif {
 	margin-top: 18px;
 }
 
+#search:hover{
+	transform: scale(1.1);
+}
+
+#rand:hover{
+	transform: scale(1.1);
+}
 
 input[type=text] {
   width: 100%;
@@ -58,15 +82,23 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-input[type=submit] {
-  width: 80%;
-  background-color: black;
+
+.menubtn {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.menuback{
+	padding: 9px;
+}
+
+.menuback:hover {
+	transform: scale(1.2);
 }
 
 #tabela {
@@ -77,6 +109,45 @@ input[type=submit] {
 	background-color: gray;
 }
 
+.sec {
+	border: 2px solid orange;
+	margin-top: 10px;font-size: 14px;
+	font-family: Arial;
+	text-align: center;
+	width: 60%;
+	padding: 10px 10px;
+	background-color: black;
+	margin-left: 16%;
+	margin-bottom: 12px;
+	color: white;
+	border-radius: 4px;
+}
+
+#sub {
+	margin-top: 10px;
+}
+
+#search {
+	background-color: #4CAF50;
+	padding: 5px;
+	margin: 15px 5px;
+}
+
+#rand {
+	background-color: rgb(242, 163, 65);
+	padding: 5px;
+}
+
+#pkname {
+	font-size:22px;
+	margin-top: 15px;
+	margin-bottom: ;
+	border: 2px solid orange;
+	background-color: black;
+	color:white;
+	border-radius:4px;
+}
+
 td {
 	background-color: black;
 	color: white;
@@ -84,6 +155,11 @@ td {
 
 th {
 	font-size: 14px;
+}
+
+
+.bgblack {
+	background-color: black;
 }
 
 .steel {
