@@ -24,6 +24,12 @@ footer {
   text-align: center;
 }
 
+.wallpaper{
+	z-index: -1;
+	width: 100vw;
+  height: 100vh;
+}
+
 .container {
 	margin: 10px auto;
 	width: 400px;
@@ -117,7 +123,7 @@ input[type=text] {
 	width: 60%;
 	padding: 10px 10px;
 	background-color: black;
-	margin-left: 16%;
+	margin-left: 79px;
 	margin-bottom: 12px;
 	color: white;
 	border-radius: 4px;
